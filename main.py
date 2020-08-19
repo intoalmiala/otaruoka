@@ -1,5 +1,5 @@
-import get_lunch as gl
-import send_lunch as sl
+import get
+import send
 
 with open("token") as f:
     TOKEN = f.readline().strip()
@@ -7,10 +7,8 @@ with open("token") as f:
 CHAT_ID = "@otaruoka"
 
 def main():
-    if lunch := gl.get_lunch():
-        sl.send_lunch(TOKEN, CHAT_ID, lunch)
-    else:
-        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    lunch = get.get_lunch():
+    send.send_lunch(TOKEN, CHAT_ID, lunch)
 
 if __name__ == "__main__":
     main()
