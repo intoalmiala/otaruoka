@@ -7,7 +7,7 @@ with open("token") as f:
 CHAT_ID = "@otaruoka"
 
 def main():
-    lunch = get.get_lunch():
+    lunch = get.get_lunch()
     send.send_lunch(TOKEN, CHAT_ID, lunch)
 
 if __name__ == "__main__":
