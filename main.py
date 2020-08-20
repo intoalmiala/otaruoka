@@ -1,7 +1,8 @@
+import sys
 import get
 import send
 
-with open("token") as f:
+with open(sys.path[0]+"/token") as f:
     TOKEN = f.readline().strip()
 
 CHAT_ID = "@otaruoka"
